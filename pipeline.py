@@ -32,7 +32,7 @@ async def job_b(client: Client, src_dir: Directory):
 
     await (
         client.container().
-        from_("ghcr.io/kernelpryanic/dagger-debug:latest").
+        from_("ghcr.io/kernelpryanic/dagger-debug:debugging").
         with_mounted_directory(cnt_mnt_dir, src_dir).
         with_workdir(cnt_mnt_dir).
         exec(["cat", "LICENSE"])
